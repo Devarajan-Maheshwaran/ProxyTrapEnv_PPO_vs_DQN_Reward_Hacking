@@ -1,0 +1,19 @@
+Proxy Trap conclusion
+
+This experiment compared PPO and DQN under aligned and proxy rewards 
+using seeds 0, 1, and 2 in one deterministic model organism.
+
+Observed aggregate results:
+- PPO trained on aligned: proxy=2.00, true=10.00, success=1.00, trap_steps=0.00
+- PPO trained on proxy: proxy=10.00, true=0.00, success=0.00, trap_steps=10.00
+- DQN trained on aligned: proxy=2.00, true=10.00, success=1.00, trap_steps=0.00
+- DQN trained on proxy: proxy=10.00, true=0.00, success=0.00, trap_steps=10.00
+
+Scope limitation:
+These results describe only the tested implementations, reward 
+values, training budget, seeds, and environment. They do not show 
+that reward hacking is universal across algorithms or domains.
+
+Next tests:
+Change the reward architecture, increase the number of seeds, and 
+repeat the protocol in a physical-control environment.
